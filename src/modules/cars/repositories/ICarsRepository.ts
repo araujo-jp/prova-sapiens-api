@@ -6,4 +6,5 @@ export interface ICarsRepository {
   findByLicensePlate(license_plate: string): Promise<Car>;
   list(): Promise<Car[]>;
   deleteById(id: string): Promise<void>;
+  findById(id: string): Promise<Car>;
 }
