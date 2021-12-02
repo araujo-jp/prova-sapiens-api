@@ -5,4 +5,5 @@ export interface ICarsRepository {
   create(data: ICreateCarDTO): Promise<Car>;
   findByLicensePlate(license_plate: string): Promise<Car>;
   list(): Promise<Car[]>;
+  deleteById(id: string): Promise<void>;
 }

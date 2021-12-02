@@ -48,4 +48,8 @@ export class CarsRepository implements ICarsRepository {
 
     return cars;
   }
+
+  async deleteById(id: string): Promise<void> {
+    await this.repository.delete({ id });
+  }
 }
