@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres
+    container_name: database_prova_sapiens
+    ports: 
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=sapiens
+    volumes:
+      - pgdata:/data/postgres
+volumes:
+  pgdata:
+    driver: local
