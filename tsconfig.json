@@ -7,7 +7,9 @@
     "outDir": "./dist",
     "paths": {
       "@database/*": ["database/*"],
-      "@routes/*": ["routes/*"]
+      "@shared/*": ["shared/*"],
+      "@routes/*": ["routes/*"],
+      "@modules/*": ["modules/*"],
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
