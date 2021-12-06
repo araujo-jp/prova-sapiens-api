@@ -1,0 +1,167 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Prova Sapiens documentação",
+    "description": "😎 João Paulo Araújo",
+    "version": "1.0.0",
+    "contact": {
+      "email": "araujojp@pm.me"
+    }
+  },
+  "paths": {
+    "/cars": {
+      "get": {
+        "tags": ["Cars"],
+        "summary": "Listagem de carros",
+        "description": "Listagem de carros",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "model_name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "license_plate": {
+                        "type": "string"
+                      },
+                      "brand": {
+                        "type": "string"
+                      },
+                      "year_manufactory": {
+                        "type": "string"
+                      },
+                      "year_mode": {
+                        "type": "string"
+                      },
+                      "sale_price": {
+                        "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Cars"],
+        "summary": "Criando carro",
+        "description": "criando carro"
+      }
+    },
+    "/cars/{id}": {
+      "get": {
+        "tags": ["Cars"],
+        "summary": "Buscar carro por id",
+        "description": "buscar carro por id",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "Car id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success"
+
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Cars"],
+        "summary": "Apagar carro por id",
+        "description": "Apagar carro por id",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "Car id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Success"
+
+          }
+        }
+      },
+      "patch": {
+        "tags": ["Cars"],
+        "summary": "Atualizar carro",
+        "description": "atualizar carro",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "Car id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }]
+      }
+    }
+  },
+  "definitions": {
+    "Specification": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "Car": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "daily_rate": {
+          "type": "number"
+        },
+        "license_plate": {
+          "type": "string"
+        },
+        "fine_amount": {
+          "type": "number"
+        },
+        "brand": {
+          "type": "string"
+        },
+        "category_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
